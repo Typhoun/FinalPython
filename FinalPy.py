@@ -10,6 +10,7 @@ colors = plt.cm.get_cmap('tab20').colors
 for i, (zip_code, group) in enumerate(most_popular.groupby('zip_code')):
     plt.scatter(group['zip_code'], group['bottles_sold'], c=colors[i % len(colors)])
 
+plt.title('Bottles Sold by Zip Code')
 plt.ylabel('Bottles Sold')
 plt.xlabel('Zip Code')
 plt.legend()
